@@ -67,9 +67,8 @@ OpenAI Agents SDK, CrewAI, LangGraph, AutoGen, and MCP.
 
 ## How to Run
 
-1. Clone the repository:
-   git clone https://github.com/your-username/ai-agents-lab  
-   cd ai-agents-lab
+1. git clone https://github.com/MaiM0hamed/agent-automation-framework.git
+cd agent-automation-framework
 
 2. Install dependencies:
    pip install -r requirements.txt

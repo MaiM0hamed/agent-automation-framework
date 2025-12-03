@@ -1,82 +1,118 @@
-# AI Sales Email Project
+# Agent Automation Framework
 
-This project uses SendGrid to send emails via Python.
+This project is a hands-on lab where I build, test, and experiment with:
+- OpenAI Function Calling Agents
+- Multi-agent systems
+- Tool-based agents (APIs, search tools, custom tools)
+- CrewAI task delegation
+- LangGraph workflow-based agents
+- Autonomous decision-making
+- Memory and stateful agents
+- Error handling and tool orchestration
 
-## Setup Instructions
+## Projects Included
 
-### 1. Create Virtual Environment
-```bash
-python -m venv venv
-```
+This repository implements a collection of practical and well-known AI Agent projects, built using the frameworks included in this lab:  
+OpenAI Agents SDK, CrewAI, LangGraph, AutoGen, and MCP.
 
-### 2. Activate Virtual Environment
+### Using OpenAI Agents SDK
+- SDR Agent (Sales Development Representative)
+- Deep Research Agent
+- **Deep Research Application** (See setup below)
+- Tools vs Agents Guardrails Demo
 
-**Windows PowerShell (if you get execution policy error, see Troubleshooting below):**
-```bash
-venv\Scripts\activate
-```
+### Using CrewAI Framework
+- Stock Picker Agent
+- Developer Agent
+- Engineering Team Agent
 
-**Windows Command Prompt (Recommended if PowerShell has issues):**
-```bash
-venv\Scripts\activate.bat
-```
+### Using LangGraph Framework
+- Sidekick Agent
+- Enhanced Sidekick (Improved Version)
+- Agents with tools, memory, and web-search workflows
 
-**Mac/Linux:**
-```bash
-source venv/bin/activate
-```
+### Using AutoGen Framework
+- Agent Creator
+- AutoGen Chat
+- AutoGen Core Workflows
+- Distributed AutoGen Agents
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+### Using MCP (Model Context Protocol)
+- AI Equity Trader
+- AI Equity Traders In Action
+- Local MCP Server
+- Remote MCP Server
+- Full MCP Server + Client Implementation
 
-### 4. Configure Environment Variables
+# Deep Research System
 
-Create a `.env` file in the project root with your SendGrid API key:
-```
-SENDGRID_API_KEY=your_api_key_here
-```
+A comprehensive AI research assistant that plans, searches, and summarizes topics, with optional email reporting.
 
-### 5. Run the Email Script
-```bash
-python send_email.py
-```
+## Features
+- **Planning Agent**: Breaks down queries into search tasks
+- **Search Agent**: Executes web searches using multiple models
+- **Writer Agent**: Synthesizes information into reports
+- **Email Integration**: Sends formatted HTML reports via SendGrid
+- **Web UI**: Built with Gradio for easy interaction
 
-## Project Structure
-- `send_email.py` - Main script to send emails via SendGrid
-- `.env` - Environment variables (API keys)
-- `requirements.txt` - Python dependencies
-- `venv/` - Virtual environment (not tracked in git)
+## Setup & Run
 
-## Troubleshooting
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### PowerShell Execution Policy Error
-If you get an error like "running scripts is disabled on this system" when activating the virtual environment in PowerShell:
+2. **Configure Environment**
+   Create a `.env` file:
+   ```env
+   OPENROUTER_API_KEY=your_key
+   SENDGRID_API_KEY=your_key  # Optional
+   ```
 
-**Option 1: Use Command Prompt instead**
-```bash
-cmd
-venv\Scripts\activate.bat
-python send_email.py
-```
+3. **Run the Application**
+   
+   **Web Interface (Recommended):**
+   ```bash
+   python gradio_app.py
+   # OR run the batch file:
+   start_gradio.bat
+   ```
 
-**Option 2: Change PowerShell execution policy (requires admin)**
-```bash
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
+   **Command Line:**
+   ```bash
+   python deep_research.py
+   ```
 
-**Option 3: Run directly without activating**
-```bash
-venv\Scripts\python.exe send_email.py
-```
+# General Framework Features
 
-### SendGrid 401 Unauthorized Error
-If you get a 401 error, your API key might be invalid or expired:
-1. Log in to [SendGrid](https://app.sendgrid.com/)
-2. Go to Settings → API Keys
-3. Create a new API key with "Mail Send" permissions
-4. Update your `.env` file with the new key
+- Built with real working Python agent code
+- Supports OpenAI’s new agent SDK
+- Includes JSON schema definitions for structured tool calls
+- Demonstrates effective agent-to-tool-to-agent loops
+- Shows how to build multi-agent collaboration
+- Covers error recovery, retries, and state tracking
+- Easy to extend with your own tools and APIs
 
-## Security Note
-⚠️ Never commit your `.env` file or API keys to version control!
+## Technologies Used
+
+- Python 3.10+
+- OpenAI SDK
+- CrewAI Framework
+- LangGraph
+- AutoGen
+- MCP
+- Requests and API tools
+- YAML / JSON Schema
+
+## How to Run (General)
+
+1. `git clone https://github.com/MaiM0hamed/agent-automation-framework.git`
+   `cd agent-automation-framework`
+
+2. Install dependencies:
+   `pip install -r requirements.txt`
+
+3. Add your API keys in `.env` or environment variables:
+   `OPENAI_API_KEY=your_key_here`
+
+4. Run any notebook or script inside the project folders.

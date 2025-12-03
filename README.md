@@ -46,3 +46,7 @@ A comprehensive AI research assistant that plans, searches, and summarizes topic
 - **Gradio** (Web Interface)
 - **AsyncIO** (Parallel processing)
 - **SendGrid** (Email delivery)
+<img width="2172" height="564" alt="image" src="https://github.com/user-attachments/assets/fa51272b-f7bf-4896-8247-a2571fae6c0e" />
+
+<img width="2294" height="1327" alt="image" src="https://github.com/user-attachments/assets/eebdfaae-5160-4249-9347-48e49e1c5eb6" />
+
